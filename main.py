@@ -5,13 +5,13 @@ import hashlib
 import random
 import datetime 
 import pyfiglet
-AdminEmail="rsaha0907@gmail.com"
+AdminEmail="abcd@gmail.com"
 creds={
     "Admin" :   {
                     "privilege"             :   "admin",
                     "user_id"               :   "1",
                     "name"                  :   "Rishav",
-                    "password"              :   'e61cc90177d9a4b07240270b8f6caaf9420075f9bd8de502a32236cbb5f32056',
+                    "password"              :   'kwcfbwiq', #Enter your hashed password
                     "amount"                :   1000,
                     "account_id"            :   1,
                     "Email"                 :   AdminEmail,
@@ -50,7 +50,7 @@ def emailVerification(clientEmail,userName,password):
     server.ehlo()
     server.starttls()
     server.ehlo()
-    server.login(AdminEmail,"iamacoder0907")
+    server.login(AdminEmail,"password") #enter admin mail password
     from_addr=AdminEmail
     to_addr=clientEmail
     subj="ATM email verifiaction system"
